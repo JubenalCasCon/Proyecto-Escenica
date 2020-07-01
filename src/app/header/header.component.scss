@@ -1,0 +1,40 @@
+
+
+$titulo:.75rem;
+$subtitulo:.875rem;
+$card:1rem;
+
+
+.bg-light
+{
+background-color: white !important;
+}
+
+.directiva
+{
+
+font-size: 2.5vh;
+}
+
+.directivamenu
+{
+font-size: 1rem;
+}
+
+
+@media (min-width:768px)
+{
+    .directiva
+    {
+        font-size: $titulo;
+        
+        font-size: 4vh;
+
+    }
+
+    .directivamenu
+    {
+        font-size: 3vh;
+    }
+  
+}
