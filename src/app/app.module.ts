@@ -11,6 +11,16 @@ import { CalendarioComponent } from './calendario/calendario.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ElencoComponent } from './elenco/elenco.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
+
 
 const routes:Routes=[{path:'',component:InicioComponent},
                     {path:'cartelera',component:CarteleraComponent},  
@@ -34,7 +44,8 @@ const routes:Routes=[{path:'',component:InicioComponent},
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    NgbModule
+    NgbModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
