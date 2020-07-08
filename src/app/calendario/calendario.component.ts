@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarioComponent implements OnInit {
 
+imagendirector:string="assets/Imagenes/director.jpg"
+
   constructor() { }
 
   ngOnInit(): void {

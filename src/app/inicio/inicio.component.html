@@ -1,11 +1,51 @@
 
 <app-header></app-header>
 <router-outlet></router-outlet>
+<div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center pt-5">
+        <img [src]="imagenelenco" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 text-center">
+      <h3 class="font-weight-bolder text-uppercase pt-5" style="font-family: 'Libre Baskerville', serif;">Escenica Teatro Joven</h3>
+    </div>
+   <div class="col-12 d-flex justify-content-center pt-5">
+     <img [src]="imagenprueba" class="img-fluid">
+
+   </div>
+  <div class="col-12 text-center">
+    <h3 class="font-weight-bolder text-uppercase pt-5" style="font-family: 'Libre Baskerville', serif;">La vida es solo un recuerdo como un circo de vida y muerte, !que comience la función¡</h3>
+
+  </div>   
+</div>
+
+<div class="container pt-5 pb-5">
+  
+    <div class="row ">
+      <div class="col-lg-4  " *ngFor="let tarjeta of tarjetas" style="font-family: 'Libre Baskerville', serif;" >
+        <div class="card  mt-3 rounded-lg shadow shadow-lg " style="background: rgb(134, 134, 134);">
+          <div class="card-body  ">
+            <img src="{{tarjeta.imagen}}" class="img-fluid ">
+            <div class="card-text p-3 m-2">
+              <h5> {{tarjeta.descripcion}}</h5>
+            </div>
+             <div  class="d-flex justify-content-center">
+               <a class=" btn btn-info rounded-pill" style="min-width:150px;">Ver más</a>
+             </div> 
+
+          </div>
+          
+        </div>
+      </div>
+
+      
+    </div>
+    
+</div>
+
 <app-footer></app-footer>
 
 
-<!-- <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-    <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
-    <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
-    <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
-  </div> -->
+
+

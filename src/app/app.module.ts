@@ -16,7 +16,8 @@ const routes:Routes=[{path:'',component:InicioComponent},
                     {path:'cartelera',component:CarteleraComponent},  
                     {path:'calendario',component:CalendarioComponent},
                     {path:'ubicacion',component:UbicacionComponent},
-                    {path:'elenco',component:ElencoComponent}]
+                    {path:'elenco',component:ElencoComponent}
+                    ]
                     
 @NgModule({
   declarations: [

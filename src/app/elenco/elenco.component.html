@@ -1,4 +1,54 @@
 
 <app-header></app-header>
 <router-outlet></router-outlet>
+<div class="container" id="collage">
+    <div class="row pt-3 pb-3">
+        <div class="col-sm-4 col-xl-3 p-4 " *ngFor="let galeria of galerias">
+          
+            <img src="{{galeria.url}}" class="img-fluid">
+            
+          </div>
+    </div>
+</div>
+
 <app-footer></app-footer>
+
+
+
+<style>
+    .flip{
+        width: 240px; height: 200px; margin: 10px;float: left;
+    }
+
+    .flip> .front
+    {
+
+position:absolute; transform: perspective(600px) rotateY(0deg);
+        background: red; width: 200px; height: 200px; border-radius: 7px;
+        transition: transform.5s linear 0s;
+    }
+
+.flip > .back
+{
+
+    position: absolute; transform: perspective(600px) rotateY(180deg);
+    background: rgb(16, 202, 72); width: 200px; height: 200px; border-radius: 7px;
+    transition: tranform.5s linear 0s;
+
+}   
+
+.flip:hover > .front
+{
+
+    transform: perspective(600px) rotateY(-180deg);
+
+
+}
+
+.flip:hover > .back
+{
+ 
+    transform: perspective(600px) rotateY(0deg);
+
+}
+</style>

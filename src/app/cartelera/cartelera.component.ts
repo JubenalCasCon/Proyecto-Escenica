@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarteleraComponent implements OnInit {
 
+  imagenportada:string="assets/Imagenes/director.jpg"
+
+
   constructor() { }
 
   ngOnInit(): void {

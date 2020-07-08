@@ -31,6 +31,11 @@ iconoteatro:string="assets/Imagenes/teatro.png";
     {
       nombre:'Ubicacion',
       ruta:'/ubicacion'
+    },
+
+    {
+      nombre:"Calendario",
+      ruta:'/calendario'
     }
 
     
