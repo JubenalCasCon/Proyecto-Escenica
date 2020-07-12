@@ -14,4 +14,25 @@ width: 100%;
 height: 250px;
 cursor: pointer;
 filter: grayscale(100%);
+transform: scale3d(50%);;
 } 
+
+#collage img:hover
+{
+    filter: grayscale(0%);
+}
+
+
+.efectocambio img:last-child
+{display:none}
+
+  .efectocambio:hover img:first-child
+  {display:none;
+    transition-delay: 3s ;
+     filter: grayscale(0%);}
+
+  .efectocambio:hover img:last-child{
+      
+    display:inline-block;
+    transition-delay:0.3s ;}
+

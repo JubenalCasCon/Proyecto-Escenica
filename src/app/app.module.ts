@@ -14,6 +14,7 @@ import { ElencoComponent } from './elenco/elenco.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
@@ -45,7 +46,8 @@ const routes:Routes=[{path:'',component:InicioComponent},
     AppRoutingModule,
     RouterModule.forRoot(routes),
     NgbModule,
-    FullCalendarModule
+    FullCalendarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

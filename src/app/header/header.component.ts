@@ -29,7 +29,7 @@ iconoteatro:string="assets/Imagenes/teatro.png";
     },
 
     {
-      nombre:'Ubicacion',
+      nombre:'Nosotros',
       ruta:'/ubicacion'
     },
 

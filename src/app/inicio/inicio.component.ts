@@ -14,6 +14,8 @@ export class InicioComponent implements OnInit {
 
   imagenelenco:string="assets/Imagenes/elenco.jpg"
 
+  musicainicio:string="assets/Imagenes/circus.m4a"
+
 
   tarjetas:any[]=[
 

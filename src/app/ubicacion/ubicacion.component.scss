@@ -1,0 +1,42 @@
+/* .curtain {
+    width: 100%;
+    height: 100vh;
+    
+    
+  }
+  
+  .left-panel,
+  .right-panel {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    z-index: 2;
+    position: relative;
+    background: turquoise;
+    transition: all 5s ease-in-out;
+  }
+  
+  .content {
+    position: absolute;
+    width: 100%;
+    top: 500%;
+    transform: translateY(-50%);
+    background: 333;
+    z-index: 1;
+    text-align: center;
+    background: white;
+  }
+  
+  .curtain:hover {
+    .left-panel {
+      transform: translateX(-100%);
+    }
+    
+    .right-panel {
+      transform: translateX(100%);
+    }
+  } */
+  
+  .efectocambio img:last-child{display:none}
+  .efectocambio:hover img:first-child{display:none}
+  .efectocambio:hover img:last-child{display:inline-block}

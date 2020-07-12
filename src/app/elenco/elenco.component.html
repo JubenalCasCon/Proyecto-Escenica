@@ -3,10 +3,17 @@
 <router-outlet></router-outlet>
 <div class="container" id="collage">
     <div class="row pt-3 pb-3">
-        <div class="col-sm-4 col-xl-3 p-4 " *ngFor="let galeria of galerias">
-          
-            <img src="{{galeria.url}}" class="img-fluid">
+
+        
+        <div class="col-sm-4 col-xl-3 p-4 efectocambio" *ngFor="let galeria of galerias">
+         
+          <a (click)="ejecutardisparador()" data-toggle="modal"  [attr.data-target] = "galeria.target" >
+                 
+            <img src="{{galeria.url}}" class="img-fluid"[@mostrartrayectoria]="disparador">
+            <img src="{{galeria.sec}}" class="img-fluid" [@mostrartrayectoria]="disparador">
             
+        </a>
+   
           </div>
     </div>
 </div>
@@ -14,8 +21,32 @@
 <app-footer></app-footer>
 
 
+   
+    <!-- Modal -->
+    <div class="container" *ngFor="let modal of modales">
+    <div class="modal fade" id="{{modal.dir}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="font-family: 'Libre Baskerville', serif;">
+          <div class="modal-header d-flex justify-content-center">
+            <h2 class="modal-title text-center" id="exampleModalLongTitle">{{modal.nombreartistico}}</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-center flex-wrap">
 
-<style>
+            <img src="{{modal.url}}"  alt="" class=" img-fluid" id="collage">
+            <img src="{{modal.url}}"  alt="" class=" img-fluid" id="collage">
+            <h4 class="text-justify p-3">{{modal.descripcion}}</h4>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+<!-- <style>
     .flip{
         width: 240px; height: 200px; margin: 10px;float: left;
     }
@@ -51,4 +82,8 @@ position:absolute; transform: perspective(600px) rotateY(0deg);
     transform: perspective(600px) rotateY(0deg);
 
 }
-</style>
+</style> -->
+
+<h1 class="text-center display-4 my-4">Nuestro elenco</h1>
+
+

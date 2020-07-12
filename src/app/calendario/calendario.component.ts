@@ -47,9 +47,7 @@ imagendirector:string="assets/Imagenes/director.jpg"
 
     
 
-    /*  this.calendarOptions ={
-      locale: esLocale
-    } */    
+   
   
     
 
