@@ -1,0 +1,41 @@
+ .cortina {
+    width: 50%;
+    height: 100vh;
+    
+    
+  }
+  
+  .panelizquierdo,
+  .panelderecho {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    z-index: 2;
+    position: relative;
+    background: turquoise;
+    transition: all 5s ease-in-out;
+  }
+  
+  .contenido {
+    position: absolute;
+   
+    transform: translateY(-50%);
+   
+    z-index: 1;
+    text-align: center;
+    
+  }
+  
+  .cortina:hover {
+    .panelizquierdo {
+      transform: translateX(-100%);
+    }
+    
+    .panelderecho {
+      transform: translateX(100%);
+    }
+  }
+  
+  .efectocambio img:last-child{display:none}
+  .efectocambio:hover img:first-child{display:none}
+  .efectocambio:hover img:last-child{display:inline-block}

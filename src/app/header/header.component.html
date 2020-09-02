@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light border border-dark  " style="font-family: 'Libre Baskerville', serif;">
+    <div class="container p-4">
+    <div class="d-flex flex-nowrap align-items-center justify-content-center overflow-hidden " >
+        <p class=" navbar-brand  directiva" style="font-family: 'Architects Daughter', cursive;" >Escuela Vocacional de Artes</p>
+    <img [src]="iconoteatro"  style="width: 10vh;">
+
+</div>
+</div>
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+        aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse " [class.collapse]="collapsed" id="navbarContent">
+        <ul class="navbar-nav ml-auto d-flex  align-items-center">
+            <li class="nav-item" *ngFor="let elemento of elementos" >
+                <a  routerLink="{{elemento.ruta}}" class="nav-link directivamenu" style="cursor: pointer;font-family: 'Architects Daughter', cursive;" id="navbarDropdown1" role="button">
+                    {{elemento.nombre}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

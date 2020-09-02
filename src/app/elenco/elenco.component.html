@@ -1,0 +1,55 @@
+
+<app-header></app-header>
+<router-outlet></router-outlet>
+<div class="container" id="collage">
+    <div class="row pt-3 pb-3">
+
+        
+        <div class="col-sm-4 col-xl-4 p-4 efectocambio d-flex justify-content-between" *ngFor="let galeria of galerias">
+         
+          <a (click)="ejecutardisparador()" data-toggle="modal"  [attr.data-target] = "galeria.target" >
+                 
+            <img src="{{galeria.url}}" class="img-fluid">
+            <img src="{{galeria.sec}}" class="img-fluid">
+            
+        </a>
+   
+          </div>
+    </div>
+</div>
+
+
+
+   
+    <!-- Modal -->
+    <div class="container" *ngFor="let modal of modales">
+    <div class="modal fade" id="{{modal.dir}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="font-family: 'Libre Baskerville', serif;">
+          <div class="modal-header d-flex justify-content-center flex-column align-items-center" style="font-family: 'Architects Daughter', cursive;">
+            <h1 class="modal-title text-center display-4 font-weight-bolder" id="exampleModalLongTitle">{{modal.nombreartistico}}</h1>
+            <h2 class="modal-title text-center display-4">{{modal.leyenda}}</h2>
+            
+          </div>
+          <div class="modal-body d-flex justify-content-center flex-column p-5">
+
+            <img src="{{modal.url}}"  alt="" class="pt-3 img-fluid" id="collage">
+            <img src="{{modal.sec}}"  alt="" class="pt-3 img-fluid" id="collage">
+
+            <p class="text-justify p-3 display-5 estilo1 " style="font-family: 'Abel', sans-serif;">{{modal.descripcion}}</p>
+            
+            
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+
+
+<h1 class="text-center display-4 my-4" style="font-family: 'Abel', sans-serif;">Mas de 20 de años de tratro joven</h1>
+
+
+<app-footer></app-footer>
